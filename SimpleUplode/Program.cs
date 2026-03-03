@@ -90,9 +90,7 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
-// ================= MIDDLEWARE ORDER (FINAL) =================
 
-// 🔥 Swagger ALWAYS ON (Production bhi)
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
@@ -101,9 +99,6 @@ app.UseSwaggerUI(c =>
 });
 
 app.UseCors("AllowAll");
-
-// ❌ Render pe HTTPS redirect mat lagao
-// app.UseHttpsRedirection();
 
 app.UseAuthentication();
 app.UseAuthorization();
