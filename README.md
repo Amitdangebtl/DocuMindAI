@@ -1,39 +1,49 @@
-# 🚀 DocuMindAI  
+# 🚀 DocuMindAI
 
-AI-powered Document Intelligence System built using **ASP.NET Core MVC (UI)** + **ASP.NET Core Web API (Backend)** + **MongoDB** + **OpenAI + Qdrant**.
+AI-powered **Document Intelligence System** built using:
 
----
+- **ASP.NET Core MVC** (Frontend UI)
+- **ASP.NET Core Web API** (Backend)
+- **MongoDB** (Database)
+- **OpenAI** (AI Processing)
+- **Qdrant** (Vector Database)
 
-## 📌 Project Overview  
-
-DocuMindAI is a full-stack AI-based document processing system that allows users to:
-
-- 📄 Upload documents  
-- 🗄️ Store document data in MongoDB  
-- 🧠 Generate embeddings using OpenAI  
-- 📊 Store embeddings in Qdrant (Vector Database)  
-- ❓ Ask AI questions based on uploaded documents  
-- 🔐 Secure APIs using JWT & HMAC  
-- 💳 Restrict features using Subscription-based access  
+This system allows users to upload documents and ask AI questions based on document content.
 
 ---
 
-## 🏗️ Solution Architecture  
+# 📌 Project Overview
 
-This solution contains **2 Projects**:
+DocuMindAI is a **full-stack AI-powered document processing platform** where users can:
 
-### 1️⃣ MVCSimpleUplode (Frontend - MVC)
+- 📄 Upload documents
+- 🗄 Store document metadata in MongoDB
+- 🧠 Generate embeddings using OpenAI
+- 📊 Store embeddings in Qdrant Vector Database
+- ❓ Ask AI questions based on uploaded documents
+- 🔐 Secure APIs using JWT + HMAC
+- 💳 Control access using subscription logic
+
+---
+
+# 🏗️ Solution Architecture
+
+The solution contains **two main projects**
+
+---
+
+## 1️⃣ MVCSimpleUplode (Frontend - MVC)
 
 Responsible for:
 
-- User Interface (Razor Views)  
-- Authentication (Login / Register)  
-- Admin Dashboard  
-- Document Upload UI  
-- AI Question Interface  
-- API Integration using HttpClient  
+- Razor UI Pages
+- Login & Register
+- Admin Dashboard
+- Document Upload UI
+- Ask AI Interface
+- API Integration using HttpClient
 
-**Main Structure:**
+### Structure
 
 ```
 Controllers/
@@ -44,19 +54,19 @@ wwwroot/
 
 ---
 
-### 2️⃣ SimpleUplode (Backend - Web API)
+## 2️⃣ SimpleUplode (Backend - Web API)
 
 Responsible for:
 
-- REST APIs  
-- Business Logic  
-- MongoDB Operations  
-- OpenAI Integration  
-- Qdrant Vector Storage  
-- Security Middleware  
-- Subscription Validation  
+- REST API endpoints
+- Business logic
+- MongoDB database operations
+- OpenAI integration
+- Qdrant vector storage
+- Security middleware
+- Subscription validation
 
-**Main Structure:**
+### Structure
 
 ```
 Controllers/
@@ -66,7 +76,7 @@ Filters/
 Security/
 ```
 
-Important Components:
+### Important Components
 
 - AiController  
 - DocumentController  
@@ -80,34 +90,34 @@ Important Components:
 
 ---
 
-## 🔐 Security Features  
+# 🔐 Security Features
 
-- ✅ JWT Authentication  
-- ✅ HMAC Signature Validation  
-- ✅ Subscription-Based Access Control  
-- ✅ Middleware-based Request Protection  
-
----
-
-## 🛠️ Technologies Used  
-
-- ASP.NET Core MVC  
-- ASP.NET Core Web API  
-- C#  
-- MongoDB  
-- OpenAI API  
-- Qdrant  
-- JWT Authentication  
-- Docker  
-- Swagger  
+✔ JWT Authentication  
+✔ HMAC Request Signature Validation  
+✔ Subscription Based Access Control  
+✔ Middleware Request Protection  
 
 ---
 
-## ⚙️ How to Run  
+# 🛠️ Technologies Used
 
-### 1️⃣ Configure MongoDB  
+- ASP.NET Core MVC
+- ASP.NET Core Web API
+- C#
+- MongoDB
+- OpenAI API
+- Qdrant Vector Database
+- JWT Authentication
+- Docker
+- Swagger
 
-Update `appsettings.json`:
+---
+
+# ⚙️ How to Run
+
+## 1️⃣ Configure MongoDB
+
+Update **appsettings.json**
 
 ```json
 "MongoDbSettings": {
@@ -118,7 +128,7 @@ Update `appsettings.json`:
 
 ---
 
-### 2️⃣ Run Backend (API)
+## 2️⃣ Run Backend API
 
 ```
 dotnet run --project SimpleUplode
@@ -126,7 +136,7 @@ dotnet run --project SimpleUplode
 
 ---
 
-### 3️⃣ Run Frontend (MVC)
+## 3️⃣ Run MVC Frontend
 
 ```
 dotnet run --project MVCSimpleUplode
@@ -134,7 +144,7 @@ dotnet run --project MVCSimpleUplode
 
 ---
 
-## 🐳 Run with Docker  
+# 🐳 Run With Docker
 
 ```
 docker-compose up --build
@@ -142,15 +152,21 @@ docker-compose up --build
 
 ---
 
-## 📌 Major API Endpoints  
+# 📌 Major API Endpoints
 
-### Upload Document  
-POST `/api/document/upload`
+### Upload Document
 
-### Ask AI  
-POST `/api/ai/ask`
+```
+POST /api/document/upload
+```
 
-Example:
+### Ask AI
+
+```
+POST /api/ai/ask
+```
+
+Example Request
 
 ```json
 {
@@ -161,18 +177,102 @@ Example:
 
 ---
 
-## 🎯 Key Highlights  
+# 📷 Application Screenshots
 
-✔ Full Stack Architecture  
-✔ AI-Powered Document Q&A  
-✔ Secure API Design  
-✔ MongoDB NoSQL Integration  
-✔ Vector Search using Qdrant  
-✔ Subscription-Based Feature Control  
+## 🔹 Login Page
+![Login](https://raw.githubusercontent.com/Amitdangebtl/DocuMindAI/main/LoginPage.png)
 
 ---
 
-## 👨‍💻 Author  
+## 🔹 Register Page
+![Register](https://raw.githubusercontent.com/Amitdangebtl/DocuMindAI/main/RegisterPage.png)
 
-**Amit Dange**  
-.NET Developer | AI Integration | MongoDB  
+---
+
+## 🔹 Home Page
+![HomePage](https://raw.githubusercontent.com/Amitdangebtl/DocuMindAI/main/HomePage(1).png)
+
+---
+
+## 🔹 Home Page (Alternate)
+![HomePage2](https://raw.githubusercontent.com/Amitdangebtl/DocuMindAI/main/Home%20Page(2).png)
+
+---
+
+## 🔹 User Dashboard
+![UserDashboard](https://raw.githubusercontent.com/Amitdangebtl/DocuMindAI/main/User%20Deshboard.png)
+
+---
+
+## 🔹 Admin Dashboard
+![AdminDashboard](https://raw.githubusercontent.com/Amitdangebtl/DocuMindAI/main/Admin%20Deshboard.png)
+
+---
+
+## 🔹 Upload Document
+![UploadDocument](https://raw.githubusercontent.com/Amitdangebtl/DocuMindAI/main/Upload%20Document.png)
+
+---
+
+## 🔹 My Documents
+![MyDocuments](https://raw.githubusercontent.com/Amitdangebtl/DocuMindAI/main/My%20Documents.png)
+
+---
+
+## 🔹 My Profile
+![MyProfile](https://raw.githubusercontent.com/Amitdangebtl/DocuMindAI/main/My%20Profile.png)
+
+---
+
+## 🔹 Ask AI
+![AskAI](https://raw.githubusercontent.com/Amitdangebtl/DocuMindAI/main/Ask%20AI.png)
+
+---
+
+## 🔹 Admin Manage Documents
+![AdminManageDocs](https://raw.githubusercontent.com/Amitdangebtl/DocuMindAI/main/Admin%20Manage%20All%20Documents.png)
+
+---
+
+## 🔹 Admin Users Management
+![AdminUsers](https://raw.githubusercontent.com/Amitdangebtl/DocuMindAI/main/Admin%20Users%20Management.png)
+
+---
+
+## 🔹 Swagger API (1)
+![Swagger1](https://raw.githubusercontent.com/Amitdangebtl/DocuMindAI/main/Swagger%20API%20(1).png)
+
+---
+
+## 🔹 Swagger API (2)
+![Swagger2](https://raw.githubusercontent.com/Amitdangebtl/DocuMindAI/main/Swagger%20API%20(2).png)
+
+---
+
+## 🔹 Docker Containers
+![Docker](https://raw.githubusercontent.com/Amitdangebtl/DocuMindAI/main/Docker%20Containers.png)
+
+---
+
+## 🔹 Qdrant Vector Database
+![Qdrant](https://raw.githubusercontent.com/Amitdangebtl/DocuMindAI/main/Qdrant.png)
+
+---
+
+# 🎯 Key Highlights
+
+✔ Full Stack AI Application  
+✔ Document-based AI Q&A System  
+✔ Vector Search using Qdrant  
+✔ Secure API Architecture  
+✔ MongoDB NoSQL Integration  
+✔ Dockerized Deployment  
+
+---
+
+# 👨‍💻 Author
+
+**Amit Dange**
+
+.NET Developer  
+ASP.NET Core | AI Integration | MongoDB
